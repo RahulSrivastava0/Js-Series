@@ -49,3 +49,16 @@ console.log(Object.entries(tinderUser))
 
 
 console.log(tinderUser.hasOwnProperty('id'))
+
+const course = {
+    courseName:"Js in Hindi",
+    price:999,
+    courseInstructor:"Hitesh"
+}
+
+// console.log(course.courseInstructor)
+
+//  there is different and more usable method to access object
+
+const {courseInstructor:Instructor} = course
+console.log(Instructor)
