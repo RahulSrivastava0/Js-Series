@@ -11,3 +11,15 @@ if(true)
 console.log(a);
 // console.log(b);
 console.log(c);
+
+
+if(true)
+    {
+        const username="Rahul"
+        if(username==="Rahul")
+            {
+                const website="Youtube"
+                console.log(`${username} ${website}`);
+            }
+        // console.log(website);
+    }
