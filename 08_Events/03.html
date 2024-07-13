@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Chai aur Javascript</h1>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+</body>
+<script>
+/*
+    setInterval(function()
+    {
+        console.log("Rahul",Date.now())
+    },1000
+    )
+*/
+
+//   printing name using reference
+    const printName=function()
+    {
+        console.log("Rahul")
+    }
+
+
+
+    document.querySelector('#start').addEventListener('click',function()
+    {
+       const stop=setInterval(printName,2000)
+    })
+    
+    // const stop = setInterval(printName,2000)
+    document.querySelector('#stop').addEventListener('click',function(){
+            clearInterval(stop);
+            console.log('Stopped')
+        }
+    )
+</script>
+</html>
