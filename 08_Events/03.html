@@ -20,23 +20,37 @@
 */
 
 //   printing name using reference
-    const printName=function()
+    // const printName=function()
+    // {
+    //     console.log("Rahul")
+    // }
+
+    let stopFlow;
+    const start = function()
     {
-        console.log("Rahul")
+        if(stopFlow===null || stopFlow==="")
+        {
+            stopFlow=setInterval(function()
+                {
+                    console.log("Rahul")
+                },1000
+            )
+        }      
     }
 
-
-
-    document.querySelector('#start').addEventListener('click',function()
+    const stop = function()
     {
-       const stop=setInterval(printName,2000)
-    })
+        clearInterval(stopFlow)
+        stopFlow=null
+    }
+
+    document.querySelector('#start').addEventListener('click',start);
+
+    document.querySelector('#stop').addEventListener('click',stop);
+
+    
     
     // const stop = setInterval(printName,2000)
-    document.querySelector('#stop').addEventListener('click',function(){
-            clearInterval(stop);
-            console.log('Stopped')
-        }
-    )
+
 </script>
 </html>
